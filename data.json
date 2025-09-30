@@ -1,0 +1,17 @@
+{
+  "students": [
+    { "name": "Alice", "age": 20, "course": "Math" },
+    { "name": "Bob", "age": 22, "course": "Physics" },
+    { "name": "Carol", "age": 21, "course": "Chemistry" },
+    { "name": "David", "age": 23, "course": "Biology" },
+    { "name": "Eve", "age": 20, "course": "CS" },
+    { "name": "Frank", "age": 22, "course": "Economics" }
+  ],
+  "events": [
+    { "title": "Hackathon", "date": "2025-10-01" },
+    { "title": "Math Olympiad", "date": "2025-10-15" },
+    { "title": "Tech Talk", "date": "2025-11-05" },
+    { "title": "Science Fair", "date": "2025-11-20" },
+    { "title": "Coding Marathon", "date": "2025-12-01" }
+  ]
+}

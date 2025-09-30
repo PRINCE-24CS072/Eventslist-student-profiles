@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student & Event Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Student Profiles</h1>
+  <div id="student-list" class="card-container"></div>
+  <div id="student-pagination" class="pagination"></div>
+
+  <h1>Event List</h1>
+  <div id="event-list" class="card-container"></div>
+  <div id="event-pagination" class="pagination"></div>
+
+  <h2>Country & State</h2>
+  <div class="dropdowns">
+    <select id="country-select">
+      <option value="">Select Country</option>
+    </select>
+    <select id="state-select">
+      <option value="">Select State</option>
+    </select>
+  </div>
+
+  <h2>Custom CAPTCHA</h2>
+  <canvas id="captchaCanvas" width="150" height="50"></canvas>
+  <input type="text" id="captchaInput" placeholder="Enter CAPTCHA"/>
+  <button onclick="verifyCaptcha()">Verify</button>
+  <p id="captchaResult"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
