@@ -1,11 +1,11 @@
 {
   "students": [
-    { "name": "Prince", "age": 19, "course": "cse" },
+    { "name": "Manav", "age": 19, "course": "cse" },
     { "name": "Het", "age": 18, "course": "ce" },
-    { "name": "Madhav", "age": 18, "course": "ce" },
-    { "name": "Rudrang", "age": 17, "course": "civil" },
+    { "name": "Prince", "age": 18, "course": "ce" },
+    { "name": "Mantra", "age": 17, "course": "civil" },
     { "name": "Darsh", "age": 22, "course": "cse" },
-    { "name": "Shrey", "age": 20, "course": "civil" }
+    { "name": "Pramath", "age": 20, "course": "civil" }
   ],
   "events": [
     { "title": "Hackathon", "date": "2025-10-8" },
@@ -15,4 +15,5 @@
     { "title": "Coding Marathon", "date": "2025-12-01" }
   ]
 }
+
 
