@@ -50,40 +50,6 @@ function setupPagination(total, pageSize, onPage, containerId) {
   }
 }
 
-// --- Country & State Dropdowns ---
-const countryState = {
-  "USA": ["California", "Texas", "New York"],
-  "India": ["Maharashtra", "Delhi", "Karnataka"],
-  "Canada": ["Ontario", "Quebec", "British Columbia"]
-};
-
-function loadCountries() {
-  const countrySelect = document.getElementById('country-select');
-  countrySelect.innerHTML = '<option value="">Select Country</option>';
-  Object.keys(countryState).forEach(country => {
-    const opt = document.createElement('option');
-    opt.value = country;
-    opt.textContent = country;
-    countrySelect.appendChild(opt);
-  });
-  countrySelect.onchange = function() {
-    loadStates(this.value);
-  };
-}
-
-function loadStates(country) {
-  const stateSelect = document.getElementById('state-select');
-  stateSelect.innerHTML = '<option value="">Select State</option>';
-  if (countryState[country]) {
-    countryState[country].forEach(state => {
-      const opt = document.createElement('option');
-      opt.value = state;
-      opt.textContent = state;
-      stateSelect.appendChild(opt);
-    });
-  }
-}
-
 // --- CAPTCHA ---
 let captchaCode = '';
 function generateCaptcha() {
@@ -146,6 +112,5 @@ function setupUI() {
   loadStudents(1);
   loadEvents(1);
 
-  loadCountries();
   generateCaptcha();
 }

@@ -1,155 +1,212 @@
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  padding: 0;
   margin: 0;
-  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+  padding: 0;
   min-height: 100vh;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 
 header {
-  background: #3a7bd5;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
   color: #fff;
-  padding: 30px 0 20px 0;
+  padding: 48px 0 32px 0;
   text-align: center;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 8px rgba(58,123,213,0.08);
+  margin-bottom: 40px;
+  box-shadow: 0 4px 24px rgba(118,75,162,0.10);
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 36px;
 }
 
-h1, h2 {
-  color: #3a7bd5;
+h1 {
+  font-size: 2.8em;
   margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(118,75,162,0.10);
+}
+
+h2 {
+  color: #764ba2;
+  margin-bottom: 20px;
   letter-spacing: 1px;
+  font-size: 1.6em;
+  font-weight: 700;
 }
 
 .section {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(58,123,213,0.10);
-  margin: 30px auto;
-  padding: 32px 24px 24px 24px;
-  max-width: 900px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(118,75,162,0.10);
+  margin: 40px auto;
+  padding: 40px 32px 32px 32px;
+  max-width: 950px;
+  transition: box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, #e0c3fc55 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section:hover {
+  box-shadow: 0 16px 48px rgba(118,75,162,0.18);
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  margin-bottom: 24px;
+  gap: 32px;
+  margin-bottom: 32px;
   justify-content: center;
 }
 
 .card {
-  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-  border-radius: 12px;
+  background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+  border-radius: 18px;
   border: none;
-  padding: 18px 20px;
-  width: 220px;
-  box-shadow: 0 2px 12px rgba(253,160,133,0.10);
-  transition: transform 0.15s;
+  padding: 26px 28px;
+  width: 250px;
+  box-shadow: 0 4px 20px rgba(247,151,30,0.10);
+  transition: transform 0.18s, box-shadow 0.18s;
   color: #333;
-  font-size: 1rem;
+  font-size: 1.08rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: fadeInUp 0.7s;
 }
 .card:hover {
-  transform: translateY(-6px) scale(1.04);
-  box-shadow: 0 8px 24px rgba(253,160,133,0.18);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 16px 40px rgba(247,151,30,0.18);
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
 
 .card h3 {
-  margin: 0 0 8px 0;
-  color: #3a7bd5;
-  font-size: 1.2em;
+  margin: 0 0 12px 0;
+  color: #764ba2;
+  font-size: 1.3em;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
 .card p {
-  margin: 4px 0;
+  margin: 7px 0;
+  font-size: 1.08em;
+  font-weight: 500;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 90px;
+  height: 90px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .pagination {
-  margin-bottom: 30px;
+  margin-bottom: 36px;
   text-align: center;
 }
 
 .pagination button {
-  margin: 0 5px;
-  padding: 7px 16px;
+  margin: 0 8px;
+  padding: 10px 22px;
   border: none;
-  border-radius: 6px;
-  background: #3a7bd5;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s;
-  font-size: 1em;
+  transition: background 0.2s, transform 0.15s;
+  font-size: 1.08em;
+  box-shadow: 0 2px 8px rgba(118,75,162,0.08);
 }
 .pagination button:hover,
 .pagination button.active {
-  background: #005bea;
-}
-
-.dropdowns {
-  margin-bottom: 20px;
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-}
-
-select {
-  padding: 8px 14px;
-  border-radius: 6px;
-  border: 1px solid #b0c4de;
-  font-size: 1em;
-  background: #f4f8fb;
-  color: #333;
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #764ba2;
+  transform: scale(1.10);
 }
 
 #captchaCanvas {
   display: block;
-  margin: 18px auto 8px auto;
-  border-radius: 8px;
+  margin: 26px auto 12px auto;
+  border-radius: 12px;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(58,123,213,0.08);
+  box-shadow: 0 2px 8px rgba(118,75,162,0.08);
 }
 
 #captchaInput {
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: 1px solid #b0c4de;
-  font-size: 1em;
-  margin-right: 8px;
+  padding: 11px 16px;
+  border-radius: 9px;
+  border: 1.5px solid #b0c4de;
+  font-size: 1.08em;
+  margin-right: 12px;
+  background: #f4f8fb;
 }
 
 button[onclick="verifyCaptcha()"] {
-  background: #fda085;
+  background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
   color: #fff;
   border: none;
-  border-radius: 6px;
-  padding: 8px 16px;
-  font-weight: 600;
+  border-radius: 9px;
+  padding: 11px 22px;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
+  font-size: 1.08em;
 }
 button[onclick="verifyCaptcha()"]:hover {
-  background: #f6d365;
-  color: #3a7bd5;
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #764ba2;
 }
 
 #captchaResult {
   text-align: center;
-  font-weight: 600;
-  margin-top: 10px;
+  font-weight: 700;
+  margin-top: 14px;
   min-height: 24px;
-  font-size: 1.1em;
+  font-size: 1.15em;
 }
 
 @media (max-width: 700px) {
   .section {
-    padding: 16px 4vw;
+    padding: 18px 4vw;
   }
   .card-container {
-    gap: 12px;
+    gap: 14px;
   }
   .card {
     width: 95vw;
-    max-width: 320px;
+    max-width: 340px;
+  }
+}
+
+/* Card fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
